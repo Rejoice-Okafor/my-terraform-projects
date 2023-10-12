@@ -15,18 +15,23 @@ Instructions
 Step 1: Clone Your Terraform Configuration Repository
 
 Clone your Terraform configuration repository to your local machine.
+
 Step 2: Create an S3 Bucket
 
 Create an S3 bucket for storing your Terraform state files using the AWS CLI.
+
 Step 3: Configure Versioning for the S3 Bucket (Optional but Recommended)
 
 Enable versioning for the S3 bucket using the AWS CLI.
+
 Step 4: Create a DynamoDB Table
 
 Create a DynamoDB table to lock the state file during Terraform operations using the AWS CLI.
+
 Step 5: Configure Terraform Backend
 
 Edit your Terraform configuration (e.g., backend.tf or main.tf) to use the S3 bucket and DynamoDB table as the backend.
+
 Step 6: Initialize and Apply
 
 Initialize and apply your Terraform configuration as usual. Terraform will use the S3 bucket and DynamoDB table for state management.
