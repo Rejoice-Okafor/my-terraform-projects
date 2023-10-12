@@ -18,9 +18,9 @@ locals {
   account_id    = data.aws_caller_identity.current.account_id
 }
 
-resource "aws_s3_bucket" "terraform_state" {
+resource "aws_s3_bucket" "terraform_bucket" {
   # With account id, this S3 bucket names can be *globally* unique.
-  bucket = "${local.account_id}-terraform-states"
+  bucket = "${local.account_id}-terraform-bucket"
 
   # Enable versioning so we can see the full revision history of our
   # state files
@@ -42,7 +42,7 @@ resource "aws_s3_bucket" "terraform_state" {
 # CREATE THE DYNAMODB TABLE
 # ------------------------------------------------------------------------------
 
-resource "aws_dynamodb_table" "terraform_lock" {
+resource "aws_dynamodb_table" "myterraform_lock" {
   name         = "terraform-lock"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
