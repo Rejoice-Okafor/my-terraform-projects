@@ -1,16 +1,16 @@
-#Terraform State Backend Setup
+# Terraform State Backend Setup
 
-##This guide provides instructions for setting up an S3 bucket and DynamoDB table to serve as a backend for storing Terraform state files. Using this configuration helps you manage your Terraform state in a more reliable and collaborative manner.
+## This guide provides instructions for setting up an S3 bucket and DynamoDB table to serve as a backend for storing Terraform state files. Using this configuration helps you manage your Terraform state in a more reliable and collaborative manner.
 
-#Prerequisites
+## Prerequisites
 Before you begin, make sure you have the following prerequisites in place:
 
-An AWS account with the necessary permissions to create S3 buckets and DynamoDB tables.
+1. An AWS account with the necessary permissions to create S3 buckets and DynamoDB tables.
 
-AWS CLI configured with the appropriate access keys and region.
+2. AWS CLI configured with the appropriate access keys and region.
 Instructions
 
-#Follow these steps to set up an S3 bucket and DynamoDB table for Terraform state:
+# Follow these steps to set up an S3 bucket and DynamoDB table for Terraform state:
 
 Step 1: Clone Your Terraform Configuration Repository
 
